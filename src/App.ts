@@ -1,7 +1,7 @@
 class SimpleGame {
 
     constructor() {
-        this.game = new Phaser.Game(800, 800, Phaser.AUTO, 'content', { preload: this.preload, create: this.create, render: this.render });
+        this.game = new Phaser.Game(800, 600, Phaser.AUTO, 'content', { preload: this.preload, create: this.create, render: this.render });
     }
 
     game: Phaser.Game;
@@ -17,7 +17,8 @@ class SimpleGame {
     }
     
     render() {
-        this.game.debug.text(this.game.world.centerX.toString(), 100, 100 );
+        this.game.debug.text(this.game.world.centerX.toString() + " " + this.game.world.centerY.toString(), this.game.world.centerX, this.game.world.centerY );
+        //this.game.debug.renderSpriteBounds('runman', "#FFFFFF");
     }
 
 }

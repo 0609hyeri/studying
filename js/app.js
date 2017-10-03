@@ -1,6 +1,6 @@
 var SimpleGame = (function () {
     function SimpleGame() {
-        this.game = new Phaser.Game(800, 800, Phaser.AUTO, 'content', { preload: this.preload, create: this.create, render: this.render });
+        this.game = new Phaser.Game(800, 600, Phaser.AUTO, 'content', { preload: this.preload, create: this.create, render: this.render });
     }
     SimpleGame.prototype.preload = function () {
         this.game.load.image('runman', 'assets/run.png');
@@ -11,7 +11,7 @@ var SimpleGame = (function () {
         runman.anchor.setTo(0.5, 0.5);
     };
     SimpleGame.prototype.render = function () {
-        this.game.debug.text(this.game.world.centerX.toString(), 100, 100);
+        this.game.debug.text(this.game.world.centerX.toString() + " " + this.game.world.centerY.toString(), this.game.world.centerX, this.game.world.centerY);
     };
     return SimpleGame;
 }());
