@@ -1,7 +1,7 @@
 {
-  "name": "studysidescoller",
+  "name": "studying",
   "version": "1.0.0",
-  "description": "studying sidescroller",
+  "description": "studying",
   "main": "index.js",
   "devDependencies": {
     "grunt": "^1.0.1",
